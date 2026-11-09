@@ -49,7 +49,7 @@ class ProdukSeeder extends Seeder
                 'deskripsi' => $deskripsi,
                 'harga' => $harga,
                 'stok' => $stok,
-                'foto' => $this->makeImage($nama, $kategoriNama, $gelap, $terang),
+                'foto' => null, // Will be set after the record is created
                 'status' => $status,
                 'alasan_penolakan' => $status === Produk::STATUS_DITOLAK
                     ? 'Foto produk kurang jelas dan belum menampilkan produk secara utuh. Mohon unggah ulang dengan pencahayaan lebih baik.'

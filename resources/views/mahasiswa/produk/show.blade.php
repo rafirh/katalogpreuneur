@@ -10,7 +10,7 @@
 
         <div class="detail__grid" style="grid-template-columns:0.9fr 1.1fr">
             <div class="detail__media">
-                @if ($u = $produk->fotoUrl())<img src="{{ $u }}" alt="{{ $produk->nama }}">@else<div class="product-thumb-placeholder" style="font-size:3rem">{{ mb_substr($produk->nama,0,1) }}</div>@endif
+                <img src="{{ $produk->fotoUrl() }}" alt="{{ $produk->nama }}">
             </div>
             <div>
                 <div class="row between items-center wrap gap-sm mb-sm">

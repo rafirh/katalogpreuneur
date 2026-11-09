@@ -18,11 +18,7 @@
 
             <div class="detail__grid">
                 <div class="detail__media reveal">
-                    @if ($url = $produk->fotoUrl())
-                        <img src="{{ $url }}" alt="{{ $produk->nama }}">
-                    @else
-                        <div class="product-thumb-placeholder" style="font-size:4rem">{{ mb_substr($produk->nama, 0, 1) }}</div>
-                    @endif
+                    <img src="{{ $produk->fotoUrl() }}" alt="{{ $produk->nama }}">
                 </div>
 
                 <div class="reveal reveal-1">

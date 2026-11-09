@@ -22,16 +22,12 @@
             <div class="hero__visual reveal reveal-2">
                 <div class="hero__collage">
                     @forelse ($produkUnggulan->take(4) as $p)
-                        @if ($url = $p->fotoUrl())
-                            <img src="{{ $url }}" alt="{{ $p->nama }}" loading="lazy">
-                        @else
-                            <div class="product-thumb-placeholder">{{ mb_substr($p->nama, 0, 1) }}</div>
-                        @endif
+                        <img src="{{ $p->fotoUrl() }}" alt="{{ $p->nama }}" loading="lazy">
                     @empty
-                        <div class="product-thumb-placeholder">K</div>
-                        <div class="product-thumb-placeholder">U</div>
-                        <div class="product-thumb-placeholder">B</div>
-                        <div class="product-thumb-placeholder">8</div>
+                        <img src="https://ui-avatars.com/api/?name=K&size=400&background=4a7c59&color=fff&bold=true&format=svg" alt="K">
+                        <img src="https://ui-avatars.com/api/?name=U&size=400&background=6b9c7e&color=fff&bold=true&format=svg" alt="U">
+                        <img src="https://ui-avatars.com/api/?name=B&size=400&background=8aba9a&color=fff&bold=true&format=svg" alt="B">
+                        <img src="https://ui-avatars.com/api/?name=8&size=400&background=a8d5ba&color=fff&bold=true&format=svg" alt="8">
                     @endforelse
                 </div>
                 <div class="hero__badge"><strong>100% Mahasiswa UB</strong>Setiap produk diverifikasi admin sebelum tayang.</div>

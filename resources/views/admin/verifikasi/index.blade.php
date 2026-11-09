@@ -33,7 +33,7 @@
             @foreach ($produk as $p)
                 <div class="panel" style="display:flex;flex-direction:column">
                     <div style="aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--border);background:var(--sage-50)">
-                        @if($u=$p->fotoUrl())<img src="{{ $u }}" alt="{{ $p->nama }}" style="width:100%;height:100%;object-fit:cover">@else<div class="product-thumb-placeholder">{{ mb_substr($p->nama,0,1) }}</div>@endif
+                        <img src="{{ $p->fotoUrl() }}" alt="{{ $p->nama }}" style="width:100%;height:100%;object-fit:cover">
                     </div>
                     <div class="panel__body" style="flex:1;display:flex;flex-direction:column;gap:0.35rem">
                         <div class="row between items-center"><span class="xsmall muted">{{ $p->kategori->nama }}</span><x-status-badge :status="$p->status" /></div>

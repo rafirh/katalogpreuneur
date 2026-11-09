@@ -82,7 +82,14 @@ class Produk extends Model
             return Storage::disk('public')->url($this->foto);
         }
 
-        return '';
+        // Gunakan placeholder gambar dengan inisial nama produk
+        $initial = mb_substr($this->nama, 0, 1);
+        $backgroundColor = dechex(crc32($this->nama) & 0xFFFFFF);
+        
+        // Menggunakan ui-avatars.com untuk generate placeholder
+        return "https://ui-avatars.com/api/?name=" . urlencode($initial) 
+            . "&size=400&background=" . $backgroundColor 
+            . "&color=fff&bold=true&format=svg";
     }
 
     public function labelStatus(): string

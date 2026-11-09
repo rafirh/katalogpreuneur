@@ -39,7 +39,7 @@
                         <tr>
                             <td>
                                 <div class="table__product">
-                                    <div class="table__thumb">@if($u=$p->fotoUrl())<img src="{{ $u }}" alt="">@else<span class="product-thumb-placeholder" style="font-size:1rem">{{ mb_substr($p->nama,0,1) }}</span>@endif</div>
+                                    <div class="table__thumb"><img src="{{ $p->fotoUrl() }}" alt=""></div>
                                     <div><div class="table__name">{{ $p->nama }}</div><div class="table__sub">{{ $p->user->name }} · {{ $p->kategori->nama }}</div></div>
                                 </div>
                             </td>

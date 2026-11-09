@@ -2,11 +2,7 @@
 
 <a href="{{ route('katalog.show', $produk) }}" class="product-card reveal">
     <div class="product-card__media">
-        @if ($url = $produk->fotoUrl())
-            <img src="{{ $url }}" alt="{{ $produk->nama }}" loading="lazy">
-        @else
-            <div class="product-thumb-placeholder">{{ mb_substr($produk->nama, 0, 1) }}</div>
-        @endif
+        <img src="{{ $produk->fotoUrl() }}" alt="{{ $produk->nama }}" loading="lazy">
         <span class="product-card__cat">{{ $produk->kategori->nama }}</span>
     </div>
     <div class="product-card__body">
